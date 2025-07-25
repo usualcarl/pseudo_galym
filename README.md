@@ -27,8 +27,8 @@
 ## Установка и запуск
 1. **Клонируй проект**
    ```bash
-   git clone https://github.com/your-username/pseudo-science-gen.git
-   cd pseudo-science-gen
+   git clone https://github.com/usualcarl/pseudo_galym.git
+   cd pseudo_galym
    ```
 
 2. **Создай виртуальное окружение**
