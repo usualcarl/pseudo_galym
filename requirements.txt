@@ -1,0 +1,9 @@
+openai
+python-dotenv
+Jinja2
+GitPython
+requests
+markdown
+yt-dlp
+whisper
+ffmpeg-python

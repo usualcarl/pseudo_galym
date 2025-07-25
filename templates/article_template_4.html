@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  <style>
+    body {
+      font-family: 'Palatino Linotype', 'Times New Roman', serif;
+      background: #1d1f21;
+      color: #ddd;
+      max-width: 820px;
+      margin: 50px auto;
+      padding: 30px;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    header {
+      border-bottom: 2px solid #666;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #f1f1f1;
+      margin-bottom: 10px;
+    }
+
+    .author {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+
+    .abstract {
+      background: #2c2f33;
+      padding: 15px 20px;
+      margin: 30px 0;
+      border-left: 5px solid #7799ff;
+      color: #ccc;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #7799ff;
+      margin-top: 40px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 1.2em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      color: #ddd;
+    }
+
+    th, td {
+      border: 1px solid #444;
+      padding: 0.5em;
+    }
+
+    th {
+      background: #2a2a2a;
+    }
+
+    .review-section {
+      background: #2c2c2c;
+      padding: 20px;
+      border-left: 4px solid #7799ff;
+      margin-top: 50px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.85rem;
+      text-align: center;
+      color: #888;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+
+    a {
+      color: #88bbff;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header>
+    <h1>{{ title }}</h1>
+    <p class="author">Автор: {{ author }}</p>
+  </header>
+
+  <main>
+    {{ body | safe }}
+  </main>
+
+  <section class="review-section">
+    <h2>Рецензия</h2>
+    <p>{{ review }}</p>
+  </section>
+
+  <footer>
+    ⚠️ Это сатира. Не воспринимайте представленную информацию всерьёз.
+  </footer>
+</body>
+</html>

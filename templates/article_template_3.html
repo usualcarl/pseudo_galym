@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #fafafa;
+      color: #222;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.75;
+    }
+
+    header {
+      border-bottom: 2px solid #333;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .author {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+
+    .abstract {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 15px 20px;
+      margin-bottom: 40px;
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      border-left: 5px solid #666;
+      padding-left: 10px;
+      margin-top: 40px;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 1em;
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: #666;
+      border-top: 1px solid #ccc;
+      margin-top: 60px;
+      padding-top: 15px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+    }
+
+    th, td {
+      border: 1px solid #bbb;
+      padding: 0.6em;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    .review-section {
+      margin-top: 50px;
+      background: #f1f1f1;
+      padding: 20px;
+      border-left: 4px solid #999;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header>
+    <h1>{{ title }}</h1>
+    <p class="author">Автор: {{ author }}</p>
+  </header>
+  <main>
+    {{ body | safe }}
+  </main>
+
+  <section class="review-section">
+    <h2>Рецензия</h2>
+    <p>{{ review }}</p>
+  </section>
+
+  <footer>
+    ⚠️ Псевдонаучная сатира. Используется в учебных целях.
+  </footer>
+</body>
+</html>
