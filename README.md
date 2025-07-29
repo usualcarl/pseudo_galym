@@ -51,7 +51,7 @@
 
 5. **Запусти скрипт**
    ```bash
-   python main.py
+   python generate_article.py
    ```
 
 ---
